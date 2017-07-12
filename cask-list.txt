@@ -1,0 +1,15 @@
+firefox
+font-fira-code
+google-chrome
+google-drive
+imageoptim
+iterm2
+keepingyouawake
+keka
+opera
+simplenote
+skitch
+sublime-text-dev
+visual-studio-code
+vlc
+whatsapp

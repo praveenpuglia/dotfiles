@@ -1,0 +1,4 @@
+cask
+emacs
+zsh
+zsh-syntax-highlighting

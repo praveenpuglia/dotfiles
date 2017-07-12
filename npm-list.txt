@@ -1,0 +1,4 @@
+/Users/praveenp/.nvm/versions/node/v6.11.0/lib
+├── gulp@3.9.1
+└── npm@3.10.10
+
