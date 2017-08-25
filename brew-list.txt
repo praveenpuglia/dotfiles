@@ -6,6 +6,7 @@ emacs
 erlang
 exa
 gdbm
+git
 git-extras
 jpeg
 libgpg-error
@@ -14,6 +15,7 @@ libpng
 libtiff
 libtool
 libyaml
+maven
 openssl
 openssl@1.1
 pcre

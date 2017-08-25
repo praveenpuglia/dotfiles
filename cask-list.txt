@@ -1,3 +1,4 @@
+android-file-transfer
 discord
 dropbox
 firefox
@@ -20,6 +21,7 @@ teamviewer
 transmission
 virtualbox
 visual-studio-code
+visual-studio-code-insiders
 vlc
 webstorm
 whatsapp
