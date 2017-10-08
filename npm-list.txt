@@ -1,15 +1,14 @@
-/Users/praveenp/.nvm/versions/node/v6.11.1/lib
-├── @angular/cli@1.2.7
-├── angular-cli@1.0.0-beta.28.3
+/Users/praveenpuglia/.nvm/versions/node/v6.11.3/lib
+├── @angular/cli@1.4.1
 ├── bower@1.8.0
-├── generator-code@1.1.16
+├── eslint@4.6.1
 ├── gulp@3.9.1
-├── http-server@0.10.0
 ├── npm@3.10.10
-├── typescript@2.4.2
-├── vsce@1.30.0
+├── prettier@1.7.0
+├── pure-prompt@1.5.2
+├── tslint@5.7.0
+├── typescript@2.5.2
 ├── vue-cli@2.8.2
-├── webpack@3.3.0
-├── yarn@0.27.5
+├── yarn@1.1.0
 └── yo@2.0.0
 

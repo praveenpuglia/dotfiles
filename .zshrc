@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/praveenp/.oh-my-zsh
+export ZSH=/Users/praveenpuglia/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -51,7 +51,7 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras z zsh-syntax-highlighting command-not-found)
+plugins=(git git-extras z zsh-syntax-highlighting command-not-found extract zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -81,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="subl ~/.zshrc"
+alias zshconfig="micro ~/.zshrc"
 alias ls="exa"
 alias la="exa -la"
 
@@ -91,10 +91,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH=~/code/github/depot_tools:"$PATH"
-export PATH="/usr/local/bin:${PATH}"
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# export PATH=~/code/github/depot_tools:"$PATH"
+# export PATH="/usr/local/bin:${PATH}"
+# # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# export PATH="$PATH:$HOME/.rvm/bin"
 
 autoload -U promptinit; promptinit
 prompt pure
