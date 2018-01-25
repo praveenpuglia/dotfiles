@@ -98,3 +98,5 @@ export NVM_DIR="$HOME/.nvm"
 
 autoload -U promptinit; promptinit
 prompt pure
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/Library/Python/2.7/bin:$PATH"
