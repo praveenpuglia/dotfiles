@@ -1,27 +1,26 @@
-/Users/praveenpuglia/.nvm/versions/node/v9.6.1/lib
-├── @angular/cli@6.0.0-rc.3
+/Users/praveenpuglia/.nvm/versions/node/v9.11.1/lib
+├── @angular/cli@6.1.2
+├── @vue/cli@3.0.0-rc.12
 ├── bower@1.8.4
+├── create-react-app@1.5.2
 ├── diff-so-fancy@1.2.0
 ├── docco@0.8.0
-├── dockly@3.3.1
+├── dockly@3.7.0
 ├── emoj@2.0.0
 ├── eslint@4.19.1
 ├── fkill-cli@4.1.0
 ├── gulp@3.9.1
-├── json-server@0.12.1
-├── np@2.20.1
-├── npm@5.8.0
+├── jade-to-handlebars@2.3.0
+├── npm@6.3.0
 ├── npx@9.7.1
-├── prettier@1.11.1
-├── pure-prompt@1.6.0
+├── prettier@1.14.2
+├── pretty-errors@1.0.1
+├── pure-prompt@1.7.0
 ├── release@3.1.7
 ├── speed-test@2.0.0
 ├── surge@0.19.0
-├── tslint@5.9.1
-├── typescript@2.8.1
-├── vue-cli@2.9.3
-├── vue-dump@1.0.0 -> /Users/praveenpuglia/code/experiments/vue-dump
-├── webpack@3.11.0
-├── yarn@1.5.1
-└── yo@2.0.1
+├── tslint@5.11.0
+├── typescript@2.9.2
+├── webpack@3.12.0
+└── yarn@1.9.4
 

@@ -3,6 +3,9 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/praveenpuglia/.oh-my-zsh
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+export PATH="/usr/local/bin:${PATH}"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -20,7 +23,7 @@ ZSH_THEME=""
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# export UPDATE_ZSH_DAYS=1
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -29,10 +32,10 @@ ZSH_THEME=""
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files OB
 # under VCS as dirty. This makes repository status check for large repositories
@@ -54,7 +57,7 @@ ZSH_THEME=""
 plugins=(git git-extras z zsh-syntax-highlighting command-not-found extract zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -84,19 +87,17 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="micro ~/.zshrc"
 alias ls="exa"
 alias la="exa -la"
-
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+#alias code=code-insiders
+alias nuke="rm -rf node_modules"
+alias nig="npm install --global"
+alias nis="npm install --save"
+alias nid="npm install --save-dev"
+alias ni="npm install"
+alias boom="find . -name "node_modules" -exec rm -rf '{}' +"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# export PATH=~/code/github/depot_tools:"$PATH"
-# export PATH="/usr/local/bin:${PATH}"
-# # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-# export PATH="$PATH:$HOME/.rvm/bin"
-
 autoload -U promptinit; promptinit
 prompt pure
-export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="$HOME/Library/Python/2.7/bin:$PATH"

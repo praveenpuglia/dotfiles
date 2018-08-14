@@ -3,10 +3,12 @@ airmail-beta
 android-file-transfer
 android-platform-tools
 caption
+cyberduck
 docker
-filezilla
 firefox
+franz
 google-chrome
+google-chrome-canary
 handbrake
 imageoptim
 insomnia
@@ -21,8 +23,8 @@ notion
 opera
 postman
 setapp
-skitch
-slack
+sketch
+skype
 spotify
 steam
 studio-3t
@@ -33,4 +35,5 @@ tunnelblick
 virtualbox
 visual-studio-code
 vlc
+webstorm
 whatsapp
