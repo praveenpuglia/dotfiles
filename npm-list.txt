@@ -1,26 +1,14 @@
-/Users/praveenpuglia/.nvm/versions/node/v9.11.1/lib
-├── @angular/cli@6.1.2
-├── @vue/cli@3.0.0-rc.12
-├── bower@1.8.4
-├── create-react-app@1.5.2
-├── diff-so-fancy@1.2.0
-├── docco@0.8.0
-├── dockly@3.7.0
-├── emoj@2.0.0
-├── eslint@4.19.1
-├── fkill-cli@4.1.0
-├── gulp@3.9.1
-├── jade-to-handlebars@2.3.0
-├── npm@6.3.0
-├── npx@9.7.1
-├── prettier@1.14.2
-├── pretty-errors@1.0.1
-├── pure-prompt@1.7.0
-├── release@3.1.7
-├── speed-test@2.0.0
-├── surge@0.19.0
-├── tslint@5.11.0
-├── typescript@2.9.2
-├── webpack@3.12.0
-└── yarn@1.9.4
+/Users/praveen/.nvm/versions/node/v12.13.0/lib
+├── @vue/cli@4.0.5
+├── commitizen@4.0.3
+├── cz-conventional-changelog@3.0.2
+├── diff-so-fancy@1.2.7
+├── elasticdump@6.16.2
+├── eslint@6.7.1
+├── fkill-cli@5.2.0
+├── fsevents@2.1.2
+├── hotel@0.8.7
+├── http-server@0.12.1
+├── npm@6.13.0
+└── release@6.1.0
 
