@@ -1,6 +1,7 @@
-/Users/praveen/.nvm/versions/node/v12.13.0/lib
-├── @vue/cli@4.0.5
-├── commitizen@4.0.3
+/Users/praveen/.nvm/versions/node/v12.16.1/lib
+├── @gridsome/cli@0.3.1
+├── @vue/cli@4.3.1
+├── auto-changelog@1.16.4
 ├── cz-conventional-changelog@3.0.2
 ├── diff-so-fancy@1.2.7
 ├── elasticdump@6.16.2
@@ -9,6 +10,8 @@
 ├── fsevents@2.1.2
 ├── hotel@0.8.7
 ├── http-server@0.12.1
-├── npm@6.13.0
-└── release@6.1.0
+├── mevn-cli@1.7.5
+├── npm@6.13.4
+├── release@6.1.0
+└── yarn@1.22.0
 

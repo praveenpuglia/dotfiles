@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -6,18 +13,24 @@ export ZSH=$HOME/.oh-my-zsh
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-#export PATH="$HOME/code/voicezen/utils:$PATH"
-export vz="$HOME/code/voicezen"
+
 export PATH=/usr/local/miniconda3/bin:"$PATH"
 export NVM_DIR="$HOME/.nvm"
 export BAT_THEME="GitHub"
 export HOMEBREW_AUTO_UPDATE_SECS=86400
+
+# MongoDB 
+export PATH="/usr/local/opt/mongodb-community@4.0/bin:$PATH"
+
+# Voicezen Related path variables
+export VZ="$HOME/code/voicezen"
+export VZ_NOTEBOOKS="$HOME/code/voicezen/notebooks"
 # Pure Config
 #PURE_PROMPT_SYMBOL='✄'
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -62,7 +75,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
-plugins=(git docker z zsh-syntax-highlighting command-not-found zsh-autosuggestions history-substring-search)
+plugins=(git docker z zsh-syntax-highlighting command-not-found zsh-autosuggestions history-substring-search tmux)
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
@@ -115,8 +128,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Loaders
 alias lnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
-lnvm
-source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -130,6 +141,11 @@ else
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<export PATH="/usr/local/opt/mongodb-community@3.6/bin:$PATH"
-# MongoDB 
-export PATH="/usr/local/opt/mongodb-community@4.0/bin:$PATH"
+# <<< conda initialize <<<
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+
+# LOAD TOOLS
+lnvm
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
