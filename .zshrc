@@ -4,6 +4,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -75,7 +76,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
-plugins=(git docker z zsh-syntax-highlighting command-not-found zsh-autosuggestions history-substring-search tmux)
+plugins=(git git-extras docker z zsh-syntax-highlighting command-not-found zsh-autosuggestions history-substring-search tmux)
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
@@ -108,6 +109,7 @@ alias zc="micro ~/.zshrc"
 alias zs="source ~/.zshrc"
 alias ls="exa"
 alias la="exa -la"
+alias prettycsv="$HOME/.local/bin/pretty_csv.sh"
 # alias code=code-insiders
 alias nuke="rm -rf node_modules"
 alias nig="npm install --global"
@@ -124,7 +126,6 @@ alias gci="git cz"
 alias auto="autossh -M 0 -fNT"
 alias bheem="ssh bheem"
 alias ip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Loaders
 alias lnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
@@ -142,7 +143,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+# source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
 # LOAD TOOLS
 lnvm
