@@ -1,17 +1,28 @@
-	# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 setopt HIST_IGNORE_ALL_DUPS
+source "/Users/praveen/secrets.sh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export PATH="/Users/praveen/Library/Application Support/JetBrains/Toolbox/scripts:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export LC_CTYPE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export ANDROID_HOME=/Users/praveen/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib:$LDFLAGS"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include -I/opt/homebrew/opt/postgresql@15/include"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export PYTHON="/opt/homebrew/bin/python3"
+export JAVA_HOME="/Users/praveen/.sdkman/candidates/java/17.0.12-zulu"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -34,11 +45,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 1
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -50,13 +61,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-#ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -110,18 +121,30 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zc="micro ~/.zshrc"
 alias zs="source ~/.zshrc"
-alias ls="exa"
-alias la="exa --icons -la"
+alias ls="eza"
+alias la="eza --icons -la"
 alias nuke="rm -rf node_modules"
 alias boom="find . -name "node_modules" -exec rm -rf '{}' +"
 alias k="fkill -v"
 # git additional 
 alias gdl="git delete-branch"
 alias gci="git cz"
-alias co="git checkout"
+alias ytd='yt-dlp --output "./%(title)s/%(title)s-[%(id)s].%(ext)s" --all-subs -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"'
+alias ytdpl='yt-dlp --all-subs -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# FZF Bindngs
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+unset _VOLTA_TOOL_RECURSION
+
+
+# bun completions
+[ -s "/Users/praveen/.oh-my-zsh/completions/_bun" ] && source "/Users/praveen/.oh-my-zsh/completions/_bun"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
