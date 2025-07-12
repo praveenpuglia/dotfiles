@@ -14,7 +14,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export LC_CTYPE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
-export ANDROID_HOME=/Users/praveen/Library/Android/sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
@@ -23,7 +23,7 @@ export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include -I/opt/homebrew/opt/post
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 export PYTHON="/opt/homebrew/bin/python3"
 export JAVA_HOME="/Users/praveen/.sdkman/candidates/java/17.0.12-zulu"
-
+export "MICRO_TRUECOLOR=1"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -49,7 +49,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-zstyle ':omz:update' frequency 1
+zstyle ':omz:update' frequency 15
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -134,17 +134,23 @@ alias ytdpl='yt-dlp --all-subs -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# FZF Bindngs
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 unset _VOLTA_TOOL_RECURSION
 
 
-# bun completions
-[ -s "/Users/praveen/.oh-my-zsh/completions/_bun" ] && source "/Users/praveen/.oh-my-zsh/completions/_bun"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+# bun completions
+[ -s "/Users/praveen/.bun/_bun" ] && source "/Users/praveen/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

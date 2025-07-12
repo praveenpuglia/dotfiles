@@ -2,11 +2,17 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 local mux = wezterm.mux
 
+config.scrollback_lines = 3500
 -- Appearance
-config.color_scheme = 'Google (light) (terminal.sexy)'
-config.window_decorations = "RESIZE"
-config.font = wezterm.font 'Maple Mono' 
-config.font_size = 13.3
+-- config.color_scheme = 'Google (light) (terminal.sexy)'
+config.color_scheme = "Catppuccin Frappe"
+-- local theme = wezterm.plugin.require('https://github.com/neapsix/wezterm').moon
+config.window_decorations = "INTEGRATED_BUTTONS"
+config.font = wezterm.font 'Auger Mono Medium' 
+config.font_size = 15
+config.line_height = 1.1
+-- config.colors = theme.colors()
+-- config.window_frame = theme.window_frame()
 -- Custom Keybindings
 config.keys = {
   {
