@@ -140,17 +140,9 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 unset _VOLTA_TOOL_RECURSION
 
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-
-# bun completions
-[ -s "/Users/praveen/.bun/_bun" ] && source "/Users/praveen/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
