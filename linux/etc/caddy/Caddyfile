@@ -1,0 +1,18 @@
+(certs) {
+	tls /etc/caddy/certs/sc-local.crt /etc/caddy/certs/sc-local.key
+}
+
+platform.smallcase.com {
+	import certs
+	reverse_proxy 127.0.0.1:8004
+}
+
+local.smallcase.com {
+	import certs
+	reverse_proxy 127.0.0.1:8083
+}
+
+mf-local.smallcase.com {
+	import certs
+	reverse_proxy 127.0.0.1:8005
+}

@@ -1,0 +1,4 @@
+net.nokyan.Resources	Resources
+org.audacityteam.Audacity	Audacity
+org.kde.okular	Okular
+org.localsend.localsend_app	LocalSend

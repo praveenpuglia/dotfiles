@@ -1,0 +1,31 @@
+[core]
+	excludesfile = /Users/praveen/.gitignore_global
+	editor = micro
+	pager = less -FRSX
+[pager]
+	difftool = true
+	diff = less -FRX
+[user]
+	signingkey = 8FA79EC8310CBB41
+	name = Praveen Puglia
+	email = praveenpuglia@gmail.com
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false
+	autoSetupRemote = true
+	default = current
+[init]
+	defaultBranch = main
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+    co = checkout
+    cob = checkout -b 
+	tree = log --graph --oneline --all
+[push]
+	autoSetupRemote = true
+	default = current
+[diff]
+	external = difftastic

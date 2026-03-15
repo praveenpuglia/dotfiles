@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Pritunl Client
+Comment=Pritunl openvpn client
+Exec=/usr/lib/pritunl_client_electron/Pritunl --gtk-version=3 --ozone-platform=wayland --enable-features=UseOzonePlatform,WaylandWindowDecorations --enable-wayland-ime
+Terminal=false
+Type=Application
+StartupNotify=false
+Icon=pritunl_client_electron
+Categories=Network;TrayIcon;
+StartupWMClass=pritunl

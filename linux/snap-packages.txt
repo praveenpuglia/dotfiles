@@ -1,0 +1,5 @@
+aws-cli
+difftastic
+ghostty
+gtk-theme-colloid
+icon-theme-colloid

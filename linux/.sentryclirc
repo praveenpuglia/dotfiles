@@ -1,0 +1,3 @@
+[auth]
+# Generate at: https://sentry.io/settings/auth-tokens/
+token=<SENTRY_AUTH_TOKEN>

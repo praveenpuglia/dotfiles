@@ -1,0 +1,4 @@
+# Custom /etc/hosts entries (append to /etc/hosts)
+127.0.1.1 local.smallcase.com
+127.0.1.1 platform.smallcase.com
+127.0.1.1 mf-local.smallcase.com
