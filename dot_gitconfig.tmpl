@@ -1,0 +1,42 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = micro
+	pager = delta
+[pager]
+	difftool = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true
+	line-numbers = true
+	syntax-theme = Dracula
+[diff]
+	tool = difftastic
+	external = difft
+[user]
+	signingkey = {{ .signingkey }}
+	name = Praveen Puglia
+	email = {{ .email }}
+{{- if eq .chezmoi.os "darwin" }}
+[gpg]
+	program = {{ .gpgprogram }}
+{{- end }}
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false
+	autoSetupRemote = true
+	default = current
+[init]
+	defaultBranch = main
+[difftool "difftastic"]
+	cmd = difft \"$LOCAL\" \"$REMOTE\"
+	prompt = false
+[alias]
+	co = checkout
+	cob = checkout -b
+	tree = log --graph --oneline --all
+[push]
+	autoSetupRemote = true
+	default = current

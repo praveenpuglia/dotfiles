@@ -1,0 +1,4 @@
+.DS_Store
+
+# SSH config contains private infra details — managed locally, not pushed
+private_dot_ssh/

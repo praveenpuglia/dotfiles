@@ -1,0 +1,43 @@
+# ── General ──────────────────────────────────────────────────────────
+zstyle ':prezto:*:*' color 'yes'
+
+# ── Modules ──────────────────────────────────────────────────────────
+# Order matters: completion after utility, syntax-highlighting before
+# history-substring-search, prompt last.
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'git' \
+  'syntax-highlighting' \
+  'autosuggestions' \
+  'history-substring-search' \
+  'prompt'
+
+# ── Editor ───────────────────────────────────────────────────────────
+zstyle ':prezto:module:editor' key-bindings 'emacs'
+
+# ── History ──────────────────────────────────────────────────────────
+zstyle ':prezto:module:history' histsize 10000
+zstyle ':prezto:module:history' savehist 10000
+
+# ── Completion ───────────────────────────────────────────────────────
+# Fuzzy / substring matching (like oh-my-zsh had)
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+
+# ── Syntax Highlighting ──────────────────────────────────────────────
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+  'main' \
+  'brackets' \
+  'pattern' \
+  'line' \
+  'cursor' \
+  'root'
+
+# ── Prompt ───────────────────────────────────────────────────────────
+zstyle ':prezto:module:prompt' theme 'powerlevel10k'

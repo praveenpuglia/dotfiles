@@ -1,0 +1,11 @@
+# chezmoi config — generated on first `chezmoi init`
+# Prompts for machine-specific values
+
+{{- $email := promptStringOnce . "email" "Git email address" -}}
+{{- $signingkey := promptStringOnce . "signingkey" "GPG signing key ID" -}}
+{{- $gpgprogram := promptStringOnce . "gpgprogram" "GPG binary path (e.g. /usr/local/bin/gpg or /usr/bin/gpg)" -}}
+
+[data]
+  email = {{ $email | quote }}
+  signingkey = {{ $signingkey | quote }}
+  gpgprogram = {{ $gpgprogram | quote }}

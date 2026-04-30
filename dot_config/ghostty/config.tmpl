@@ -1,0 +1,12 @@
+font-family = Maple Mono NF
+font-family-bold = Maple Mono NF
+font-family-italic = Maple Mono NF
+font-family-bold-italic = Maple Mono NF
+{{- if eq .chezmoi.os "darwin" }}
+
+theme = Catppuccin Frappe
+{{- else }}
+
+theme = GitHub Light High Contrast
+window-save-state = always
+{{- end }}
